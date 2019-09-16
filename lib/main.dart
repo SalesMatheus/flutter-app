@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 
 void main() => runApp(App());
 
-
 class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter App',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blueGrey[900],
+        primarySwatch: Colors.cyan,
       ),
       home: HomePage(),
     );
@@ -19,8 +19,15 @@ class App extends StatelessWidget {
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("App List"),
+      ),
+      body: Container(
+        child: Center(
+          child: Text("Hello World!!"),
+        ),
+      ),
     );
   }
 }
